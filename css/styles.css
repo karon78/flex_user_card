@@ -1,5 +1,5 @@
 *{
-    /*   margin: 0; */
+       /*margin: 0; */
     box-sizing: border-box;
 
 }
@@ -9,59 +9,83 @@ background: aquamarine;
 .card{
     --colorFon: white;
     --colorText: red;
-    --colorBorder: gray;
+    --colorBorder: #d7d6d6;
+    --colorBorderMin: #eeecec;
 
     display: flex;
     flex-wrap: wrap;
     Justify-content: Space-evenly;
-
 }
 .userCard{
     display: flex;
     Flex-direction: column;
     Align-items: center;
-    width: 300px;
+    width: 400px;
     padding: 20px;
     background: var(--colorFon);
     font-family: 'Roboto', sans-serif;
-
+    position: relative;
 }
+
+/*======image==========*/
+
 .userImage, .nationality {
     display: inline-block;
     border-radius: 150%;
     object-fit: cover;
-    border: 10px solid var(--colorBorder);
+
 }
+
 .userImage{
-    width: 150px;
-    height: 150px;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border: 10px solid var(--colorBorder);
+
 }
 .nationality{
+    position: absolute;
+    top: 32%;
+    right: 25%;
     width: 50px;
     height: 50px;
+    z-index: 20;
+    border: 10px solid var(--colorBorderMin);
 }
-
+/*======end image=====*/
+/*======text========*/
 .name, .profession, .text{
     text-align: center;
-
+    font-weight: normal;
 }
 .name{
     color: var(--colorText);
     font-size: 25px;
+    margin-bottom: 0;
 }
 .profession{
-    font-size: 15px;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 2em;
 
 }
-.logo{
-    display: flex;
-    Justify-content: space-between;
-    margin: auto;
+.text{
+font-size: 20px;
+    font-weight: normal;
 
+}
+/*======end text======*/
+/*====footer========*/
+.logo{
+margin-bottom: 20px;
 
 }
 .icons{
     display: inline-block;
-    color: red;
-    border: 1px solid black;
+    color: var(--colorText);
 }
+.icons + .icons{
+    margin-left: 60px;
+}
+
+/*======end footer========*/
